@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2015 at 11:54 AM
+-- Generation Time: Apr 08, 2015 at 06:49 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -17,8 +17,147 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `kalemi`
+-- Database: `k2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `article`
+--
+
+CREATE TABLE IF NOT EXISTS `article` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `summary` text COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `category` int(11) NOT NULL,
+  `created_at` int(11) NOT NULL,
+  `updated_at` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `article`
+--
+
+INSERT INTO `article` (`id`, `user_id`, `title`, `summary`, `content`, `status`, `category`, `created_at`, `updated_at`) VALUES
+(1, 1, 'This is just a test ', 'my first article on new template ', '<p><strong><img alt="crying" src="http://localhost/k2/assets/2c139215/plugins/smiley/images/cry_smile.png" style="height:23px; width:23px" title="crying" /></strong></p>\n\n<p>&nbsp;</p>\n\n<h2 style="font-style:italic;"><span style="background-color:#FF8C00">best&nbsp;</span></h2>\n\n<h2 style="font-style:italic;"><span style="background-color:#FF8C00">Fabjan&nbsp;</span></h2>\n', 2, 1, 1428483237, 1428483237);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_assignment`
+--
+
+CREATE TABLE IF NOT EXISTS `auth_assignment` (
+  `item_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_at` int(11) DEFAULT NULL,
+  PRIMARY KEY (`item_name`,`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `auth_assignment`
+--
+
+INSERT INTO `auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
+('admin', 2, NULL),
+('theCreator', 1, 1428483124);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_item`
+--
+
+CREATE TABLE IF NOT EXISTS `auth_item` (
+  `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `type` int(11) NOT NULL,
+  `description` text COLLATE utf8_unicode_ci,
+  `rule_name` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `data` text COLLATE utf8_unicode_ci,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL,
+  PRIMARY KEY (`name`),
+  KEY `rule_name` (`rule_name`),
+  KEY `idx-auth_item-type` (`type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `auth_item`
+--
+
+INSERT INTO `auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `created_at`, `updated_at`) VALUES
+('admin', 1, 'Administrator of this application', NULL, NULL, 1428482459, 1428482459),
+('adminArticle', 2, 'Allows admin+ roles to manage articles', NULL, NULL, 1428482459, 1428482459),
+('createArticle', 2, 'Allows editor+ roles to create articles', NULL, NULL, 1428482459, 1428482459),
+('deleteArticle', 2, 'Allows admin+ roles to delete articles', NULL, NULL, 1428482459, 1428482459),
+('editor', 1, 'Editor of this application', NULL, NULL, 1428482459, 1428482459),
+('manageUsers', 2, 'Allows admin+ roles to manage users', NULL, NULL, 1428482459, 1428482459),
+('member', 1, 'Registered users, members of this site', NULL, NULL, 1428482459, 1428482459),
+('premium', 1, 'Premium members. They have more permissions than normal members', NULL, NULL, 1428482459, 1428482459),
+('support', 1, 'Support staff', NULL, NULL, 1428482459, 1428482459),
+('theCreator', 1, 'You!', NULL, NULL, 1428482459, 1428482459),
+('updateArticle', 2, 'Allows editor+ roles to update articles', NULL, NULL, 1428482459, 1428482459),
+('updateOwnArticle', 2, 'Update own article', 'isAuthor', NULL, 1428482459, 1428482459),
+('usePremiumContent', 2, 'Allows premium+ roles to use premium content', NULL, NULL, 1428482458, 1428482458);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_item_child`
+--
+
+CREATE TABLE IF NOT EXISTS `auth_item_child` (
+  `parent` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `child` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`parent`,`child`),
+  KEY `child` (`child`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `auth_item_child`
+--
+
+INSERT INTO `auth_item_child` (`parent`, `child`) VALUES
+('theCreator', 'admin'),
+('editor', 'adminArticle'),
+('editor', 'createArticle'),
+('admin', 'deleteArticle'),
+('admin', 'editor'),
+('admin', 'manageUsers'),
+('support', 'member'),
+('support', 'premium'),
+('editor', 'support'),
+('admin', 'updateArticle'),
+('updateOwnArticle', 'updateArticle'),
+('editor', 'updateOwnArticle'),
+('premium', 'usePremiumContent');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_rule`
+--
+
+CREATE TABLE IF NOT EXISTS `auth_rule` (
+  `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `data` text COLLATE utf8_unicode_ci,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `auth_rule`
+--
+
+INSERT INTO `auth_rule` (`name`, `data`, `created_at`, `updated_at`) VALUES
+('isAuthor', 'O:25:"app\\rbac\\rules\\AuthorRule":3:{s:4:"name";s:8:"isAuthor";s:9:"createdAt";i:1428482457;s:9:"updatedAt";i:1428482457;}', 1428482457, 1428482457);
 
 -- --------------------------------------------------------
 
@@ -32,7 +171,10 @@ CREATE TABLE IF NOT EXISTS `client` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_typeclient` (`type`),
+  KEY `userclientcreated` (`created_by`),
+  KEY `userclientupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -57,7 +199,10 @@ CREATE TABLE IF NOT EXISTS `clientusers` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_client` (`client`),
+  KEY `userclientuserscreated` (`created_by`),
+  KEY `userclientusersupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -72,10 +217,32 @@ CREATE TABLE IF NOT EXISTS `clientype` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-
-  
+  PRIMARY KEY (`id`),
+  KEY `userclientypecreated` (`created_by`),
+  KEY `userclientypeupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migration`
+--
+
+CREATE TABLE IF NOT EXISTS `migration` (
+  `version` varchar(180) NOT NULL,
+  `apply_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `migration`
+--
+
+INSERT INTO `migration` (`version`, `apply_time`) VALUES
+('m000000_000000_base', 1428482425),
+('m141022_115823_create_user_table', 1428482431),
+('m141022_115912_create_rbac_tables', 1428482432),
+('m150104_153617_create_article_table', 1428482432);
 
 -- --------------------------------------------------------
 
@@ -93,8 +260,9 @@ CREATE TABLE IF NOT EXISTS `package` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
- 
+  PRIMARY KEY (`id`),
+  KEY `userpackagecreated` (`created_by`),
+  KEY `userpackageupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -115,7 +283,11 @@ CREATE TABLE IF NOT EXISTS `packageservices` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_package` (`package`),
+  KEY `fk_services` (`service`),
+  KEY `userpackageservicescreated` (`created_by`),
+  KEY `userpackageservicesupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -132,7 +304,10 @@ CREATE TABLE IF NOT EXISTS `payments` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_res` (`reservation`),
+  KEY `userpaymentscreated` (`created_by`),
+  KEY `userpaymentsupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -154,7 +329,9 @@ CREATE TABLE IF NOT EXISTS `provider` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `userprovidercreated` (`created_by`),
+  KEY `userproviderupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -176,7 +353,11 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_client_res` (`client`),
+  KEY `fk_pcg_service` (`packageservice`),
+  KEY `userreservationcreated` (`created_by`),
+  KEY `userreservationupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -196,12 +377,68 @@ CREATE TABLE IF NOT EXISTS `services` (
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`,`provider`)
+  PRIMARY KEY (`id`,`provider`),
+  KEY `fk_provider` (`provider`),
+  KEY `userservicescreated` (`created_by`),
+  KEY `userservicesupdated` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `status` smallint(6) NOT NULL,
+  `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `account_activation_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` int(11) NOT NULL,
+  `updated_at` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `email`, `password_hash`, `status`, `auth_key`, `password_reset_token`, `account_activation_token`, `created_at`, `updated_at`) VALUES
+(1, 'banyx101', 'kaligrafik@gmail.com', '$2y$13$v/up5z7/4B5GOkoCPcBREO1CLTiFUhHWAn2fzscL.7dNrYzCWSm9e', 10, 'CJ5TSCcVLUoZa87_bVKBxZb0RyRdKkrA', NULL, NULL, 1428483124, 1428484035),
+(2, 'denis', 'denis.saatciu@gmail.com', '$2y$13$K1gv693OxgXpTw8P0d.XbuPlM.qxYFbYq44dYPwDRMEbJaX27deOK', 10, '7Jn5BDAVN-a0zuF3ApuqyTQwLkvGNbhn', NULL, NULL, 1428483959, 1428483959);
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `article`
+--
+ALTER TABLE `article`
+  ADD CONSTRAINT `article_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `auth_assignment`
+--
+ALTER TABLE `auth_assignment`
+  ADD CONSTRAINT `auth_assignment_ibfk_1` FOREIGN KEY (`item_name`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `auth_item`
+--
+ALTER TABLE `auth_item`
+  ADD CONSTRAINT `auth_item_ibfk_1` FOREIGN KEY (`rule_name`) REFERENCES `auth_rule` (`name`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `auth_item_child`
+--
+ALTER TABLE `auth_item_child`
+  ADD CONSTRAINT `auth_item_child_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `auth_item_child_ibfk_2` FOREIGN KEY (`child`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `client`
