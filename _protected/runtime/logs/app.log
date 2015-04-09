@@ -1242,3 +1242,80 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1428509424.432
     'REQUEST_TIME' => 1428509424
 ]
+2015-04-09 09:42:23 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\k2\_protected\controllers\ArticleController.php:174
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\controllers\ArticleController.php(52): app\controllers\ArticleController->findModel('2')
+#1 [internal function]: app\controllers\ArticleController->actionView('2')
+#2 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#5 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/view', Array)
+#6 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-04-09 09:42:22 [::1][-][-][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_COOKIE = [
+    '_identity' => 'b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '7f81005eb3eca977699fa1f3864a973fcbdccb0e23e75ee878fdfb512b42eba2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MHTCIaf239RlI5VCkQI7B1PapP9ZSJHB\";}'
+    'PHPSESSID' => 'bh9u80vi6o9btoqhf5hld4e377'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => '_identity=b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=7f81005eb3eca977699fa1f3864a973fcbdccb0e23e75ee878fdfb512b42eba2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MHTCIaf239RlI5VCkQI7B1PapP9ZSJHB%22%3B%7D; PHPSESSID=bh9u80vi6o9btoqhf5hld4e377'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\bin;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\cmd;C:\\Android\\apache-ant-1.9.4-bin\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.7.0_11\\bin;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\tools;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\platform-tools;C:\\Program Files\\Windows Live\\Shared;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin; C:\\xampp\\php;C:\\Program Files\\Skype\\Phone\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/k2/index.php'
+    'REMOTE_PORT' => '51043'
+    'REDIRECT_QUERY_STRING' => 'id=2'
+    'REDIRECT_URL' => '/k2/article/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=2'
+    'REQUEST_URI' => '/k2/article/view?id=2'
+    'SCRIPT_NAME' => '/k2/index.php'
+    'PHP_SELF' => '/k2/index.php'
+    'REQUEST_TIME_FLOAT' => 1428565342.511
+    'REQUEST_TIME' => 1428565342
+]
