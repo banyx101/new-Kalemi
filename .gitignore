@@ -15,8 +15,8 @@ nbproject
 # windows thumbnail cache
 Thumbs.db
 
-# composer vendor dir
-#_protected/vendor
+#  runtime dir
+_protected/runtime
 
 # composer itself is not needed
 composer.phar
