@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "package".
  *
  * @property integer $id
- * @property string $descriptiom
+ * @property string $description
  * @property string $startdate
  * @property string $enddate
  * @property string $type
@@ -40,7 +40,7 @@ class Package extends \yii\db\ActiveRecord
             [['startdate', 'enddate', 'updated_at'], 'safe'],
             [['cost'], 'number'],
             [['created_by', 'updated_by'], 'integer'],
-            [['descriptiom'], 'string', 'max' => 500],
+            [['description'], 'string', 'max' => 500],
             [['type'], 'string', 'max' => 45]
         ];
     }
@@ -52,7 +52,7 @@ class Package extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'descriptiom' => Yii::t('app', 'Descriptiom'),
+            'description' => Yii::t('app', 'Description'),
             'startdate' => Yii::t('app', 'Startdate'),
             'enddate' => Yii::t('app', 'Enddate'),
             'type' => Yii::t('app', 'Type'),

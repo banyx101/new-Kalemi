@@ -19,7 +19,7 @@ class PackageSearch extends Package
     {
         return [
             [['id', 'created_by', 'updated_by'], 'integer'],
-            [['descriptiom', 'startdate', 'enddate', 'type', 'updated_at'], 'safe'],
+            [['description', 'startdate', 'enddate', 'type', 'updated_at'], 'safe'],
             [['cost'], 'number'],
         ];
     }
@@ -66,7 +66,7 @@ class PackageSearch extends Package
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'descriptiom', $this->descriptiom])
+        $query->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['like', 'type', $this->type]);
 
         return $dataProvider;

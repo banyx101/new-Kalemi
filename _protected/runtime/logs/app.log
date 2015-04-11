@@ -1319,3 +1319,523 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1428565342.511
     'REQUEST_TIME' => 1428565342
 ]
+2015-04-11 13:15:37 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "clients".' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('clients', Array)
+#1 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-04-11 13:15:36 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'a8lvfoieng67j88vpv12av2i53'
+    '_identity' => 'b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=a8lvfoieng67j88vpv12av2i53; _identity=b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\bin;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\cmd;C:\\Android\\apache-ant-1.9.4-bin\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.7.0_11\\bin;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\tools;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\platform-tools;C:\\Program Files\\Windows Live\\Shared;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin; C:\\xampp\\php;C:\\Program Files\\Skype\\Phone\\;C:\\Users\\fabjan lashi\\AppData\\Roaming\\npm; C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/k2/index.php'
+    'REMOTE_PORT' => '51795'
+    'REDIRECT_URL' => '/k2/clients'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/k2/clients'
+    'SCRIPT_NAME' => '/k2/index.php'
+    'PHP_SELF' => '/k2/index.php'
+    'REQUEST_TIME_FLOAT' => 1428750936.928
+    'REQUEST_TIME' => 1428750936
+]
+2015-04-11 13:16:02 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "clienttype".' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('clienttype', Array)
+#1 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-04-11 13:16:02 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'a8lvfoieng67j88vpv12av2i53'
+    '_identity' => 'b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=a8lvfoieng67j88vpv12av2i53; _identity=b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\bin;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\cmd;C:\\Android\\apache-ant-1.9.4-bin\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.7.0_11\\bin;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\tools;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\platform-tools;C:\\Program Files\\Windows Live\\Shared;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin; C:\\xampp\\php;C:\\Program Files\\Skype\\Phone\\;C:\\Users\\fabjan lashi\\AppData\\Roaming\\npm; C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/k2/index.php'
+    'REMOTE_PORT' => '51830'
+    'REDIRECT_URL' => '/k2/clienttype'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/k2/clienttype'
+    'SCRIPT_NAME' => '/k2/index.php'
+    'PHP_SELF' => '/k2/index.php'
+    'REQUEST_TIME_FLOAT' => 1428750962.515
+    'REQUEST_TIME' => 1428750962
+]
+2015-04-11 13:16:06 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "clientype".' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('clientype', Array)
+#1 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-04-11 13:16:06 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'a8lvfoieng67j88vpv12av2i53'
+    '_identity' => 'b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=a8lvfoieng67j88vpv12av2i53; _identity=b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\bin;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\cmd;C:\\Android\\apache-ant-1.9.4-bin\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.7.0_11\\bin;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\tools;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\platform-tools;C:\\Program Files\\Windows Live\\Shared;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin; C:\\xampp\\php;C:\\Program Files\\Skype\\Phone\\;C:\\Users\\fabjan lashi\\AppData\\Roaming\\npm; C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/k2/index.php'
+    'REMOTE_PORT' => '51830'
+    'REDIRECT_URL' => '/k2/clientype'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/k2/clientype'
+    'SCRIPT_NAME' => '/k2/index.php'
+    'PHP_SELF' => '/k2/index.php'
+    'REQUEST_TIME_FLOAT' => 1428750966.666
+    'REQUEST_TIME' => 1428750966
+]
+2015-04-11 13:16:12 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "clientType".' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('clientType', Array)
+#1 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-04-11 13:16:12 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'a8lvfoieng67j88vpv12av2i53'
+    '_identity' => 'b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=a8lvfoieng67j88vpv12av2i53; _identity=b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\bin;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\cmd;C:\\Android\\apache-ant-1.9.4-bin\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.7.0_11\\bin;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\tools;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\platform-tools;C:\\Program Files\\Windows Live\\Shared;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin; C:\\xampp\\php;C:\\Program Files\\Skype\\Phone\\;C:\\Users\\fabjan lashi\\AppData\\Roaming\\npm; C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/k2/index.php'
+    'REMOTE_PORT' => '51836'
+    'REDIRECT_URL' => '/k2/clientType'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/k2/clientType'
+    'SCRIPT_NAME' => '/k2/index.php'
+    'PHP_SELF' => '/k2/index.php'
+    'REQUEST_TIME_FLOAT' => 1428750972.595
+    'REQUEST_TIME' => 1428750972
+]
+2015-04-11 13:32:19 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "clientType".' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('clientType', Array)
+#1 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-04-11 13:32:19 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'a8lvfoieng67j88vpv12av2i53'
+    '_identity' => 'b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=a8lvfoieng67j88vpv12av2i53; _identity=b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\bin;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\cmd;C:\\Android\\apache-ant-1.9.4-bin\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.7.0_11\\bin;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\tools;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\platform-tools;C:\\Program Files\\Windows Live\\Shared;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin; C:\\xampp\\php;C:\\Program Files\\Skype\\Phone\\;C:\\Users\\fabjan lashi\\AppData\\Roaming\\npm; C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/k2/index.php'
+    'REMOTE_PORT' => '52233'
+    'REDIRECT_URL' => '/k2/clientType'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/k2/clientType'
+    'SCRIPT_NAME' => '/k2/index.php'
+    'PHP_SELF' => '/k2/index.php'
+    'REQUEST_TIME_FLOAT' => 1428751939.564
+    'REQUEST_TIME' => 1428751939
+]
+2015-04-11 13:46:34 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\PackageSearch::descriptiom' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('descriptiom')
+#1 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\validators\Validator.php(235): yii\db\BaseActiveRecord->__get('descriptiom')
+#2 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Model.php(333): yii\validators\Validator->validateAttributes(Object(app\models\PackageSearch), Array)
+#3 C:\xampp\htdocs\k2\_protected\models\PackageSearch.php(53): yii\base\Model->validate()
+#4 C:\xampp\htdocs\k2\_protected\controllers\PackageController.php(36): app\models\PackageSearch->search(Array)
+#5 [internal function]: app\controllers\PackageController->actionIndex()
+#6 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#9 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('package/', Array)
+#10 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-04-11 13:46:34 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'a8lvfoieng67j88vpv12av2i53'
+    '_identity' => 'b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=a8lvfoieng67j88vpv12av2i53; _identity=b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\bin;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\cmd;C:\\Android\\apache-ant-1.9.4-bin\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.7.0_11\\bin;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\tools;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\platform-tools;C:\\Program Files\\Windows Live\\Shared;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin; C:\\xampp\\php;C:\\Program Files\\Skype\\Phone\\;C:\\Users\\fabjan lashi\\AppData\\Roaming\\npm; C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/k2/index.php'
+    'REMOTE_PORT' => '52642'
+    'REDIRECT_URL' => '/k2/package/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/k2/package/'
+    'SCRIPT_NAME' => '/k2/index.php'
+    'PHP_SELF' => '/k2/index.php'
+    'REQUEST_TIME_FLOAT' => 1428752794.558
+    'REQUEST_TIME' => 1428752794
+]
+2015-04-11 13:47:23 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Package::descriptiom' in C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('descriptiom')
+#1 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\helpers\BaseHtml.php(1886): yii\db\BaseActiveRecord->__get('descriptiom')
+#2 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\helpers\BaseHtml.php(1154): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Package), 'descriptiom')
+#3 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\helpers\BaseHtml.php(1191): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Package), 'descriptiom', Array)
+#4 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\widgets\ActiveField.php(358): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Package), 'descriptiom', Array)
+#5 C:\xampp\htdocs\k2\_protected\views\package\_form.php(15): yii\widgets\ActiveField->textInput(Array)
+#6 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\xampp\htdocs...', Array)
+#8 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\xampp\htdocs...', Array, NULL)
+#9 C:\xampp\htdocs\k2\_protected\views\package\create.php(19): yii\base\View->render('_form', Array)
+#10 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\xampp\htdocs...', Array)
+#12 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\xampp\htdocs...', Array, Object(app\controllers\PackageController))
+#13 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('create', Array, Object(app\controllers\PackageController))
+#14 C:\xampp\htdocs\k2\_protected\controllers\PackageController.php(70): yii\base\Controller->render('create', Array)
+#15 [internal function]: app\controllers\PackageController->actionCreate()
+#16 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('create', Array)
+#19 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('package/create', Array)
+#20 C:\xampp\htdocs\k2\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\xampp\htdocs\k2\index.php(12): yii\base\Application->run()
+#22 {main}
+2015-04-11 13:47:23 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'a8lvfoieng67j88vpv12av2i53'
+    '_identity' => 'b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/k2/package/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=a8lvfoieng67j88vpv12av2i53; _identity=b8b3d2ac132555ad7e0b0d658682cd78568c1484b8c7c6372318a15657450540a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=6b336596174cf2a1ad69fcfe876f250b28ea4f72e9a8492110d10d09e8ac821ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Z63peWgVhrDCFcHcgoI5xF4WdEgX7WJo%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\bin;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef\\cmd;C:\\Android\\apache-ant-1.9.4-bin\\apache-ant-1.9.4\\bin;C:\\Program Files\\Java\\jdk1.7.0_11\\bin;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\tools;C:\\Users\\fabjan lashi\\Desktop\\adt-bundle-windows-x86-20140321\\adt-bundle-windows-x86-20140321\\sdk\\platform-tools;C:\\Program Files\\Windows Live\\Shared;C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin; C:\\xampp\\php;C:\\Program Files\\Skype\\Phone\\;C:\\Users\\fabjan lashi\\AppData\\Roaming\\npm; C:\\Users\\fabjan lashi\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/k2/index.php'
+    'REMOTE_PORT' => '52654'
+    'REDIRECT_URL' => '/k2/package/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/k2/package/create'
+    'SCRIPT_NAME' => '/k2/index.php'
+    'PHP_SELF' => '/k2/index.php'
+    'REQUEST_TIME_FLOAT' => 1428752843.368
+    'REQUEST_TIME' => 1428752843
+]
