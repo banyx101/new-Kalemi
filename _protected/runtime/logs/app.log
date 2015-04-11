@@ -1839,3 +1839,271 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1428752843.368
     'REQUEST_TIME' => 1428752843
 ]
+2015-04-11 21:48:56 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(732): yii\db\Schema->quoteValue('editor')
+#6 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(164): yii\db\Connection->quoteValue('editor')
+#7 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Command->getRawSql()
+#8 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#9 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#10 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(223): yii\db\Query->one(Object(yii\db\Connection))
+#11 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(184): yii\rbac\DbManager->getItem('editor')
+#12 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(124): yii\rbac\DbManager->checkAccessRecursive(NULL, 'editor', Array, Array)
+#13 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\User.php(662): yii\rbac\DbManager->checkAccess(NULL, 'editor', Array)
+#14 C:\UniServerZ\www\new-Kalemi\_protected\views\layouts\main.php(40): yii\web\User->can('editor')
+#15 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\UniServerZ\\w...')
+#16 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\UniServerZ\\w...', Array)
+#17 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('C:\\UniServerZ\\w...', Array, Object(app\controllers\SiteController))
+#18 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<div class="sit...')
+#19 C:\UniServerZ\www\new-Kalemi\_protected\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#20 [internal function]: app\controllers\SiteController->actionIndex()
+#21 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#22 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#23 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#24 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#25 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 C:\UniServerZ\www\new-Kalemi\index.php(12): yii\base\Application->run()
+#27 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(732): yii\db\Schema->quoteValue('editor')
+#4 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(164): yii\db\Connection->quoteValue('editor')
+#5 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Command->getRawSql()
+#6 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#7 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#8 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(223): yii\db\Query->one(Object(yii\db\Connection))
+#9 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(184): yii\rbac\DbManager->getItem('editor')
+#10 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(124): yii\rbac\DbManager->checkAccessRecursive(NULL, 'editor', Array, Array)
+#11 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\User.php(662): yii\rbac\DbManager->checkAccess(NULL, 'editor', Array)
+#12 C:\UniServerZ\www\new-Kalemi\_protected\views\layouts\main.php(40): yii\web\User->can('editor')
+#13 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\UniServerZ\\w...')
+#14 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\UniServerZ\\w...', Array)
+#15 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('C:\\UniServerZ\\w...', Array, Object(app\controllers\SiteController))
+#16 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<div class="sit...')
+#17 C:\UniServerZ\www\new-Kalemi\_protected\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#18 [internal function]: app\controllers\SiteController->actionIndex()
+#19 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#20 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#21 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#22 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#23 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 C:\UniServerZ\www\new-Kalemi\index.php(12): yii\base\Application->run()
+#25 {main}
+Additional Information:
+
+2015-04-11 21:48:56 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'PATH' => 'C:\\UniServerZ\\core\\apache2\\bin;C:\\UniServerZ\\core\\mysql\\bin;C:\\UniServerZ\\core\\php54;C:\\UniServerZ\\core\\openssl;C:\\UniServerZ\\core\\msmtp;C:\\UniServerZ\\utils;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\glassfish3\\jdk7\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\nodejs\\;C:\\UniServerZ\\core\\php54;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\fabjan-it\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\fabjan-it\\AppData\\Roaming\\npm;C:\\Users\\fabjan-it\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/UniServerZ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/UniServerZ/www'
+    'SERVER_ADMIN' => 'admin@localhost'
+    'SCRIPT_FILENAME' => 'C:/UniServerZ/www/new-Kalemi/index.php'
+    'REMOTE_PORT' => '51007'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/new-kalemi/'
+    'SCRIPT_NAME' => '/new-kalemi/index.php'
+    'PHP_SELF' => '/new-kalemi/index.php'
+    'REQUEST_TIME_FLOAT' => 1428785336.03
+    'REQUEST_TIME' => 1428785336
+]
+2015-04-11 21:48:58 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(732): yii\db\Schema->quoteValue('editor')
+#6 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(164): yii\db\Connection->quoteValue('editor')
+#7 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Command->getRawSql()
+#8 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#9 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#10 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(223): yii\db\Query->one(Object(yii\db\Connection))
+#11 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(184): yii\rbac\DbManager->getItem('editor')
+#12 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(124): yii\rbac\DbManager->checkAccessRecursive(NULL, 'editor', Array, Array)
+#13 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\User.php(662): yii\rbac\DbManager->checkAccess(NULL, 'editor', Array)
+#14 C:\UniServerZ\www\new-Kalemi\_protected\views\layouts\main.php(40): yii\web\User->can('editor')
+#15 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\UniServerZ\\w...')
+#16 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\UniServerZ\\w...', Array)
+#17 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('C:\\UniServerZ\\w...', Array, Object(app\controllers\SiteController))
+#18 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<div class="sit...')
+#19 C:\UniServerZ\www\new-Kalemi\_protected\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#20 [internal function]: app\controllers\SiteController->actionIndex()
+#21 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#22 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#23 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#24 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#25 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 C:\UniServerZ\www\new-Kalemi\index.php(12): yii\base\Application->run()
+#27 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Connection.php(732): yii\db\Schema->quoteValue('editor')
+#4 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(164): yii\db\Connection->quoteValue('editor')
+#5 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(791): yii\db\Command->getRawSql()
+#6 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#7 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#8 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(223): yii\db\Query->one(Object(yii\db\Connection))
+#9 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(184): yii\rbac\DbManager->getItem('editor')
+#10 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\rbac\DbManager.php(124): yii\rbac\DbManager->checkAccessRecursive(NULL, 'editor', Array, Array)
+#11 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\User.php(662): yii\rbac\DbManager->checkAccess(NULL, 'editor', Array)
+#12 C:\UniServerZ\www\new-Kalemi\_protected\views\layouts\main.php(40): yii\web\User->can('editor')
+#13 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\UniServerZ\\w...')
+#14 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\UniServerZ\\w...', Array)
+#15 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('C:\\UniServerZ\\w...', Array, Object(app\controllers\SiteController))
+#16 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<div class="sit...')
+#17 C:\UniServerZ\www\new-Kalemi\_protected\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#18 [internal function]: app\controllers\SiteController->actionIndex()
+#19 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#20 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#21 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#22 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#23 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 C:\UniServerZ\www\new-Kalemi\index.php(12): yii\base\Application->run()
+#25 {main}
+Additional Information:
+
+2015-04-11 21:48:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'tag' => '552988b82e18d'
+]
+
+$_COOKIE = [
+    '_csrf' => '7f017d0cd1da42478b3ccc02109ab8bf16a7ddb93cc8a93425c4f16d9f8d8056a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"B-hKN7JIHq1u2vdOuzg4xCeCya2vdN1X\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/new-kalemi/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => '_csrf=7f017d0cd1da42478b3ccc02109ab8bf16a7ddb93cc8a93425c4f16d9f8d8056a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22B-hKN7JIHq1u2vdOuzg4xCeCya2vdN1X%22%3B%7D'
+    'PATH' => 'C:\\UniServerZ\\core\\apache2\\bin;C:\\UniServerZ\\core\\mysql\\bin;C:\\UniServerZ\\core\\php54;C:\\UniServerZ\\core\\openssl;C:\\UniServerZ\\core\\msmtp;C:\\UniServerZ\\utils;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\glassfish3\\jdk7\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\nodejs\\;C:\\UniServerZ\\core\\php54;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\fabjan-it\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\fabjan-it\\AppData\\Roaming\\npm;C:\\Users\\fabjan-it\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/UniServerZ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/UniServerZ/www'
+    'SERVER_ADMIN' => 'admin@localhost'
+    'SCRIPT_FILENAME' => 'C:/UniServerZ/www/new-Kalemi/index.php'
+    'REMOTE_PORT' => '51009'
+    'REDIRECT_QUERY_STRING' => 'tag=552988b82e18d'
+    'REDIRECT_URL' => '/new-kalemi/debug/default/toolbar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'tag=552988b82e18d'
+    'REQUEST_URI' => '/new-kalemi/debug/default/toolbar?tag=552988b82e18d'
+    'SCRIPT_NAME' => '/new-Kalemi/index.php'
+    'PHP_SELF' => '/new-Kalemi/index.php'
+    'REQUEST_TIME_FLOAT' => 1428785338.702
+    'REQUEST_TIME' => 1428785338
+]
+2015-04-11 21:50:48 [127.0.0.1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "clients".' in C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('clients', Array)
+#1 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\UniServerZ\www\new-Kalemi\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\UniServerZ\www\new-Kalemi\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\UniServerZ\www\new-Kalemi\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-04-11 21:50:48 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    '_csrf' => '7f017d0cd1da42478b3ccc02109ab8bf16a7ddb93cc8a93425c4f16d9f8d8056a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"B-hKN7JIHq1u2vdOuzg4xCeCya2vdN1X\";}'
+    'PHPSESSID' => 'pp5o25l35eecsuc0pflaaih5d6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'enpatu'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,sq;q=0.6,it;q=0.4'
+    'HTTP_COOKIE' => '_csrf=7f017d0cd1da42478b3ccc02109ab8bf16a7ddb93cc8a93425c4f16d9f8d8056a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22B-hKN7JIHq1u2vdOuzg4xCeCya2vdN1X%22%3B%7D; PHPSESSID=pp5o25l35eecsuc0pflaaih5d6'
+    'PATH' => 'C:\\UniServerZ\\core\\apache2\\bin;C:\\UniServerZ\\core\\mysql\\bin;C:\\UniServerZ\\core\\php54;C:\\UniServerZ\\core\\openssl;C:\\UniServerZ\\core\\msmtp;C:\\UniServerZ\\utils;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\glassfish3\\jdk7\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\nodejs\\;C:\\UniServerZ\\core\\php54;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\fabjan-it\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin;C:\\Users\\fabjan-it\\AppData\\Roaming\\npm;C:\\Users\\fabjan-it\\AppData\\Local\\GitHub\\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/UniServerZ/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/UniServerZ/www'
+    'SERVER_ADMIN' => 'admin@localhost'
+    'SCRIPT_FILENAME' => 'C:/UniServerZ/www/new-Kalemi/index.php'
+    'REMOTE_PORT' => '51057'
+    'REDIRECT_URL' => '/new-Kalemi/clients'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/new-Kalemi/clients'
+    'SCRIPT_NAME' => '/new-Kalemi/index.php'
+    'PHP_SELF' => '/new-Kalemi/index.php'
+    'REQUEST_TIME_FLOAT' => 1428785448.297
+    'REQUEST_TIME' => 1428785448
+]
