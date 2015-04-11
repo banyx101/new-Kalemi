@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2015 at 06:49 PM
+-- Generation Time: Apr 11, 2015 at 10:52 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -23,6 +23,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `agency`
+--
+
+CREATE TABLE IF NOT EXISTS `agency` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `NIPT` varchar(20) DEFAULT NULL,
+  `address` varchar(150) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `tel` varchar(15) NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `created_by` (`created_by`,`updated_by`),
+  KEY `updated_by` (`updated_by`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `agency`
+--
+
+INSERT INTO `agency` (`id`, `name`, `NIPT`, `address`, `email`, `tel`, `created_by`, `updated_by`, `updated_at`) VALUES
+(1, 'Kalemi Travel', NULL, 'Sheshi Wilson, Tirane', 'turizem@kalemitravel.com', '+355694045921', 1, 1, '2015-04-11 12:19:43');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `article`
 --
 
@@ -38,14 +66,15 @@ CREATE TABLE IF NOT EXISTS `article` (
   `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `article`
 --
 
 INSERT INTO `article` (`id`, `user_id`, `title`, `summary`, `content`, `status`, `category`, `created_at`, `updated_at`) VALUES
-(1, 1, 'This is just a test ', 'my first article on new template ', '<p><strong><img alt="crying" src="http://localhost/k2/assets/2c139215/plugins/smiley/images/cry_smile.png" style="height:23px; width:23px" title="crying" /></strong></p>\n\n<p>&nbsp;</p>\n\n<h2 style="font-style:italic;"><span style="background-color:#FF8C00">best&nbsp;</span></h2>\n\n<h2 style="font-style:italic;"><span style="background-color:#FF8C00">Fabjan&nbsp;</span></h2>\n', 2, 1, 1428483237, 1428483237);
+(1, 1, 'This is just a test ', 'my first article on new template ', '<p><strong><img alt="crying" src="http://localhost/k2/assets/2c139215/plugins/smiley/images/cry_smile.png" style="height:23px; width:23px" title="crying" /></strong></p>\n\n<p>&nbsp;</p>\n\n<h2 style="font-style:italic;"><span style="background-color:#FF8C00">best&nbsp;</span></h2>\n\n<h2 style="font-style:italic;"><span style="background-color:#FF8C00">Fabjan&nbsp;</span></h2>\n', 2, 1, 1428483237, 1428483237),
+(2, 1, 'test', 'some artikle', '<p>cfsdfs&nbsp;</p>\r\n', 2, 2, 1428599157, 1428599157);
 
 -- --------------------------------------------------------
 
@@ -162,6 +191,36 @@ INSERT INTO `auth_rule` (`name`, `data`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `branch`
+--
+
+CREATE TABLE IF NOT EXISTS `branch` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `NIPT` varchar(20) DEFAULT NULL,
+  `member_of` int(11) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `tel` varchar(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `member_of` (`member_of`),
+  KEY `created_by` (`created_by`),
+  KEY `updated_by` (`updated_by`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `branch`
+--
+
+INSERT INTO `branch` (`id`, `name`, `NIPT`, `member_of`, `address`, `tel`, `email`, `created_by`, `updated_at`, `updated_by`) VALUES
+(1, 'Kalemi Travel Shkoder', NULL, 1, 'Shkoder, Parruce', '+355694045921', 'shkoder@kalemitravel.com', 1, '2015-04-11 12:21:08', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `client`
 --
 
@@ -175,7 +234,14 @@ CREATE TABLE IF NOT EXISTS `client` (
   KEY `fk_typeclient` (`type`),
   KEY `userclientcreated` (`created_by`),
   KEY `userclientupdated` (`updated_by`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `client`
+--
+
+INSERT INTO `client` (`id`, `type`, `created_by`, `updated_by`, `updated_at`) VALUES
+(1, 1, 1, 1, '2015-04-11 11:34:11');
 
 -- --------------------------------------------------------
 
@@ -189,6 +255,7 @@ CREATE TABLE IF NOT EXISTS `clientusers` (
   `firstName` varchar(225) NOT NULL,
   `lastName` varchar(225) NOT NULL,
   `NIPT` varchar(10) DEFAULT NULL,
+  `agency` int(11) DEFAULT NULL,
   `branch` varchar(45) DEFAULT NULL,
   `tel` varchar(45) DEFAULT NULL,
   `cel` varchar(45) DEFAULT NULL,
@@ -202,8 +269,16 @@ CREATE TABLE IF NOT EXISTS `clientusers` (
   PRIMARY KEY (`id`),
   KEY `fk_client` (`client`),
   KEY `userclientuserscreated` (`created_by`),
-  KEY `userclientusersupdated` (`updated_by`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  KEY `userclientusersupdated` (`updated_by`),
+  KEY `agency` (`agency`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `clientusers`
+--
+
+INSERT INTO `clientusers` (`id`, `client`, `firstName`, `lastName`, `NIPT`, `agency`, `branch`, `tel`, `cel`, `fax`, `email`, `city`, `address`, `created_by`, `updated_by`, `updated_at`) VALUES
+(1, 1, 'Fabjan', 'Lashi', 'N32322L', 1, '1', '+35569404592', '+35569404592', '', '', 'TIRANA', '30 duncan street', 1, NULL, '2015-04-11 12:21:42');
 
 -- --------------------------------------------------------
 
@@ -220,7 +295,14 @@ CREATE TABLE IF NOT EXISTS `clientype` (
   PRIMARY KEY (`id`),
   KEY `userclientypecreated` (`created_by`),
   KEY `userclientypeupdated` (`updated_by`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `clientype`
+--
+
+INSERT INTO `clientype` (`id`, `description`, `created_by`, `updated_by`, `updated_at`) VALUES
+(1, 'Agency', 1, 1, '2015-04-11 11:33:39');
 
 -- --------------------------------------------------------
 
@@ -252,7 +334,7 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 
 CREATE TABLE IF NOT EXISTS `package` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descriptiom` varchar(500) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL,
   `startdate` datetime DEFAULT NULL,
   `enddate` datetime DEFAULT NULL,
   `type` varchar(45) DEFAULT NULL,
@@ -263,7 +345,14 @@ CREATE TABLE IF NOT EXISTS `package` (
   PRIMARY KEY (`id`),
   KEY `userpackagecreated` (`created_by`),
   KEY `userpackageupdated` (`updated_by`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `package`
+--
+
+INSERT INTO `package` (`id`, `description`, `startdate`, `enddate`, `type`, `cost`, `created_by`, `updated_by`, `updated_at`) VALUES
+(1, 'Kolashin 21 Maj', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '3200000.00', 1, NULL, '2015-04-11 11:49:51');
 
 -- --------------------------------------------------------
 
@@ -280,6 +369,8 @@ CREATE TABLE IF NOT EXISTS `packageservices` (
   `start` datetime DEFAULT NULL,
   `end` datetime DEFAULT NULL,
   `cost` decimal(10,2) DEFAULT NULL,
+  `agency` int(11) DEFAULT NULL,
+  `branch` int(11) DEFAULT NULL,
   `created_by` int(10) DEFAULT NULL,
   `updated_by` int(10) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
@@ -287,7 +378,9 @@ CREATE TABLE IF NOT EXISTS `packageservices` (
   KEY `fk_package` (`package`),
   KEY `fk_services` (`service`),
   KEY `userpackageservicescreated` (`created_by`),
-  KEY `userpackageservicesupdated` (`updated_by`)
+  KEY `userpackageservicesupdated` (`updated_by`),
+  KEY `agency` (`agency`,`branch`),
+  KEY `branch` (`branch`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -332,7 +425,14 @@ CREATE TABLE IF NOT EXISTS `provider` (
   PRIMARY KEY (`id`),
   KEY `userprovidercreated` (`created_by`),
   KEY `userproviderupdated` (`updated_by`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `provider`
+--
+
+INSERT INTO `provider` (`id`, `name`, `address`, `tel`, `email`, `website`, `owner`, `city`, `type`, `created_by`, `updated_by`, `updated_at`) VALUES
+(1, 'Fabjan Lashi', 'Tirane - Marko Bocari', '0694045921', 'flashi@e-shkolla.com', '', '1', 'TIRANA', '', 1, NULL, '2015-04-11 11:40:36');
 
 -- --------------------------------------------------------
 
@@ -381,7 +481,14 @@ CREATE TABLE IF NOT EXISTS `services` (
   KEY `fk_provider` (`provider`),
   KEY `userservicescreated` (`created_by`),
   KEY `userservicesupdated` (`updated_by`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `description`, `provider`, `type`, `default_price`, `capacity`, `price_per_unit`, `created_by`, `updated_by`, `updated_at`) VALUES
+(1, 'Sherbim Autobuzi', 1, '1', '100000.00', 20, '5000.00', 1, NULL, '2015-04-11 11:42:39');
 
 -- --------------------------------------------------------
 
@@ -416,6 +523,13 @@ INSERT INTO `user` (`id`, `username`, `email`, `password_hash`, `status`, `auth_
 --
 
 --
+-- Constraints for table `agency`
+--
+ALTER TABLE `agency`
+  ADD CONSTRAINT `userupdateagency` FOREIGN KEY (`updated_by`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `useragencycreate` FOREIGN KEY (`created_by`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `article`
 --
 ALTER TABLE `article`
@@ -441,6 +555,14 @@ ALTER TABLE `auth_item_child`
   ADD CONSTRAINT `auth_item_child_ibfk_2` FOREIGN KEY (`child`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `branch`
+--
+ALTER TABLE `branch`
+  ADD CONSTRAINT `agencybranch` FOREIGN KEY (`member_of`) REFERENCES `agency` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `userbranch` FOREIGN KEY (`created_by`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `userupdatebranch` FOREIGN KEY (`updated_by`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `client`
 --
 ALTER TABLE `client`
@@ -454,6 +576,7 @@ ALTER TABLE `client`
 -- Constraints for table `clientusers`
 --
 ALTER TABLE `clientusers`
+  ADD CONSTRAINT `fk_agency` FOREIGN KEY (`agency`) REFERENCES `agency` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_client` FOREIGN KEY (`client`) REFERENCES `client` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `userclientuserscreated` FOREIGN KEY (`created_by`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `userclientusersupdated` FOREIGN KEY (`updated_by`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -476,8 +599,10 @@ ALTER TABLE `package`
 -- Constraints for table `packageservices`
 --
 ALTER TABLE `packageservices`
+  ADD CONSTRAINT `fk_branch` FOREIGN KEY (`branch`) REFERENCES `branch` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_package` FOREIGN KEY (`package`) REFERENCES `package` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_services` FOREIGN KEY (`service`) REFERENCES `services` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `packageservices_agency` FOREIGN KEY (`agency`) REFERENCES `agency` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `userpackageservicescreated` FOREIGN KEY (`created_by`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `userpackageservicesupdated` FOREIGN KEY (`updated_by`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
