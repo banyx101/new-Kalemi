@@ -16,7 +16,7 @@ nbproject
 Thumbs.db
 
 #  runtime dir
-_protected/runtime
+#_protected/runtime
 
 # composer itself is not needed
 composer.phar
